@@ -6,17 +6,21 @@ import Hero from '../components/NavBar/Hero'
 import Menu from '../components/NavBar/Menu'
 import FoodList from '../components/NavBar/FoodList'
 import Table from '../components/NavBar/Table'
+import Testimonial from '../components/NavBar/Testimonial'
+import Footer from '../components/NavBar/Footer'
 
 const RootHome = () => {
   return (
     <>
     <Navbar/>
-    <Hero/>
+    {/* <Hero/>
     <FoodList/>
     <Menu/>
     <AboutHero/>
     <Table/>
+    <Testimonial/> */}
     <Outlet/>
+    <Footer/>
     </>
   )
 }
