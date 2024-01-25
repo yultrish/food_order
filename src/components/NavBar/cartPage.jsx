@@ -4,28 +4,28 @@ import p2 from '/p2.jpg';
 const CartPage = () => {
   const [orders, setOrders] = useState([]);
 
-  useEffect(() => {
-  const token = localStorage.getItem("token");
+  // useEffect(() => {
+  // const token = localStorage.getItem("token");
 
-    const fetchOrders = async () => {
-      try {
-        const response = await fetch('http://localhost:3080/d1/getAllOrders',{
-            method: "GET",
-            headers: {
-            //   "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-        });
-        const data = await response.json();
-        console.log(data)
-        setOrders(data); // assuming the response is an array of orders
-      } catch (error) {
-        console.error('Error fetching orders:', error);
-      }
-    };
+  //   const fetchOrders = async () => {
+  //     try {
+  //       const response = await fetch('http://localhost:3080/d1/getAllOrders',{
+  //           method: "GET",
+  //           headers: {
+  //           //   "Content-Type": "application/json",
+  //             Authorization: `Bearer ${token}`,
+  //           },
+  //       });
+  //       const data = await response.json();
+  //       console.log(data)
+  //       setOrders(data); // assuming the response is an array of orders
+  //     } catch (error) {
+  //       console.error('Error fetching orders:', error);
+  //     }
+  //   };
 
-    fetchOrders();
-  }, []); // Empty dependency array ensures the effect runs only once on mount
+  //   fetchOrders();
+  // }, []);
 
   return (
     <>
@@ -47,7 +47,7 @@ const CartPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {orders.map((order) => (
+                {/* {orders.map((order) => ( */}
                   <tr key={order.ID}>
                     {/* <td>{order.orderNumber}</td> */}
                     <td>
@@ -63,7 +63,7 @@ const CartPage = () => {
                       <button>View</button>
                     </td>
                   </tr>
-                ))}
+                {/* // ))} */}
               </tbody>
             </table>
           </div>

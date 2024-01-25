@@ -126,7 +126,6 @@ export const mealsLoaderData = async () => {
     const meals = await fetch(`http://localhost:3080/v1/meals`);
     const response = await meals.json();
     console.log(response);
-    console.log(response[0].name);
     return response;
   } catch (error) {
     console.error("Error fetching meals:", error);
